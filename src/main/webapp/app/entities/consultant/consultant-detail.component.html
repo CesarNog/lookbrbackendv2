@@ -1,0 +1,68 @@
+
+<div *ngIf="consultant">
+    <h2><span jhiTranslate="lookbrbackendv2App.consultant.detail.title">Consultant</span> {{consultant.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="lookbrbackendv2App.consultant.consultantId">Consultant Id</span></dt>
+        <dd>
+            <span>{{consultant.consultantId}}</span>
+        </dd>
+        <dt><span jhiTranslate="lookbrbackendv2App.consultant.consultantName">Consultant Name</span></dt>
+        <dd>
+            <span>{{consultant.consultantName}}</span>
+        </dd>
+        <dt><span jhiTranslate="lookbrbackendv2App.consultant.consultantDescription">Consultant Description</span></dt>
+        <dd>
+            <span>{{consultant.consultantDescription}}</span>
+        </dd>
+        <dt><span jhiTranslate="lookbrbackendv2App.consultant.consultantCoverPhotoURL">Consultant Cover Photo URL</span></dt>
+        <dd>
+            <span>{{consultant.consultantCoverPhotoURL}}</span>
+        </dd>
+        <dt><span jhiTranslate="lookbrbackendv2App.consultant.consultantProfilePhotoURL">Consultant Profile Photo URL</span></dt>
+        <dd>
+            <span>{{consultant.consultantProfilePhotoURL}}</span>
+        </dd>
+        <dt><span jhiTranslate="lookbrbackendv2App.consultant.charge">Charge</span></dt>
+        <dd>
+            <span>{{consultant.charge}}</span>
+        </dd>
+        <dt><span jhiTranslate="lookbrbackendv2App.consultant.inspirationURL">Inspiration URL</span></dt>
+        <dd>
+            <span>{{consultant.inspirationURL}}</span>
+        </dd>
+        <dt><span jhiTranslate="lookbrbackendv2App.consultant.profilePhoto">Profile Photo</span></dt>
+        <dd>
+            <span>{{consultant.profilePhoto}}</span>
+        </dd>
+        <dt><span jhiTranslate="lookbrbackendv2App.consultant.status">Status</span></dt>
+        <dd>
+            <span jhiTranslate="{{'lookbrbackendv2App.Status.' + consultant.status}}">{{consultant.status}}</span>
+        </dd>
+        <dt><span jhiTranslate="lookbrbackendv2App.consultant.page">Page</span></dt>
+        <dd>
+            <span>{{consultant.page}}</span>
+        </dd>
+        <dt><span jhiTranslate="lookbrbackendv2App.consultant.look">Look</span></dt>
+        <dd>
+            <div *ngIf="consultant.lookId">
+                <a [routerLink]="['/look', consultant.lookId]">{{consultant.lookId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'consultant/'+ consultant.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

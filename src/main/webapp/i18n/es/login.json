@@ -1,0 +1,24 @@
+{
+    "lookbrbackendv2App": {
+        "login" : {
+            "home": {
+                "title": "Logins",
+                "createLabel": "Crear nuevo Login",
+                "createOrEditLabel": "Crear o editar Login",
+                "search": "Search for Login"
+            },
+            "created": "Un nuevo Login ha sido creado con el identificador {{ param }}",
+            "updated": "Un Login ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Login ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Login {{ id }}?"
+            },
+            "detail": {
+                "title": "Login"
+            },
+            "loginType": "Login Type",
+            "token": "Token",
+            "user": "User"
+        }
+    }
+}

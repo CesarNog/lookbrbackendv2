@@ -1,0 +1,10 @@
+{
+    "lookbrbackendv2App": {
+        "Status" : {
+            "null": "",
+            "VERDE": "VERDE",
+            "AMARELO": "AMARELO",
+            "VERMELHO": "VERMELHO"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "lookbrbackendv2App": {
+        "LoginType" : {
+            "null": "",
+            "FACEBOOK": "FACEBOOK",
+            "EMAIL": "EMAIL"
+        }
+    }
+}
